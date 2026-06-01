@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "77aEfOuNxzmKfoXWMpGOq"
+uri = "file://artifacts/ludo-club/assets/images/icon.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "jU86Z_uz6hL4eTRAUEMAi"
+uri = "file://artifacts/ludo-club/assets/images/splash.png"
+type = "image"
+title = "generated_image"

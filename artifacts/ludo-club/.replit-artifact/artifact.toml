@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/"
+title = "Ludo Club"
+version = "1.0.0"
+id = "artifacts/ludo-club"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+name = "expo"
+paths = [ "/" ]
+localPort = 18937
+
+[services.development]
+run = "pnpm --filter @workspace/ludo-club run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ludo-club", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/ludo-club", "run", "serve" ]
+
+[services.env]
+PORT = "18937"
+BASE_PATH = "/"
