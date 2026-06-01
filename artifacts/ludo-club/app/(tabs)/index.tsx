@@ -1,5 +1,6 @@
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import { router } from "expo-router";
 import * as Haptics from "expo-haptics";
 import React from "react";
 import {
@@ -165,7 +166,10 @@ export default function HomeScreen() {
           {/* Play Online */}
           <TouchableOpacity
             activeOpacity={0.88}
-            onPress={() => Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy)}
+            onPress={() => {
+              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
+              router.push("/play-online");
+            }}
           >
             <LinearGradient
               colors={["#3de84a", "#25c435", "#1aab28"]}
@@ -182,7 +186,10 @@ export default function HomeScreen() {
           {/* 2 vs 2 */}
           <TouchableOpacity
             activeOpacity={0.88}
-            onPress={() => Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy)}
+            onPress={() => {
+              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
+              router.push("/friends");
+            }}
           >
             <LinearGradient
               colors={["#3da8f0", "#2890da", "#1a78c2"]}
@@ -199,7 +206,10 @@ export default function HomeScreen() {
           {/* Computer */}
           <TouchableOpacity
             activeOpacity={0.88}
-            onPress={() => Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy)}
+            onPress={() => {
+              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
+              router.push("/computer");
+            }}
           >
             <LinearGradient
               colors={["#c060f0", "#a040d8", "#8030c0"]}
